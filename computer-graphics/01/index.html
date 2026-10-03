@@ -2,16 +2,35 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Счётчик</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Алгоритм ЦДА</title>
 </head>
 <body>
-    <h1>Счётчик</h1>
-    <p id="value">0</p>
-    <button id="plus">+1</button>
-    <button id="minus">-1</button>
-    <button id="reset">Сброс</button>
-    <p id="text">Число равно нулю</p>
-    <script src="app.js"></script>
+<h1>Построение отрезка</h1>
+<p>
+    Начало:
+    <label>x <input id="x1" type="number" value="2" min="0" max="39" step="1"></label>
+    <label>y <input id="y1" type="number" value="2" min="0" max="29" step="1"></label>
+</p>
+<p>
+    Конец:
+    <label>x <input id="x2" type="number" value="20" min="0" max="39" step="1"></label>
+    <label>y <input id="y2" type="number" value="8" min="0" max="29" step="1"></label>
+</p>
+<button id="build" type="button">Построить</button>
+<p id="message"></p>
+<canvas id="canvas" width="400" height="300"></canvas>
+<table>
+    <thead>
+        <tr>
+            <th>Шаг</th>
+            <th>x до округления</th>
+            <th>y до округления</th>
+            <th>Пиксель x</th>
+            <th>Пиксель y</th>
+        </tr>
+    </thead>
+    <tbody id="steps"></tbody>
+</table>
+<script src="app.js"></script>
 </body>
 </html>
