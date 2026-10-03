@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анализатор чисел</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Анализатор чисел</h1>
+
+  <label for="number">Введите число:</label>
+  <input id="number" type="number" step="any">
+
+  <button id="add" type="button">Добавить</button>
+  <button id="remove-last" type="button">Удалить последнее</button>
+  <button id="clear" type="button">Очистить</button>
+
+  <p id="error" role="alert"></p>
+
+  <h2>Введённые числа</h2>
+  <ul id="numbers"></ul>
+
+  <h2>Статистика</h2>
+  <p>Количество: <span id="count"></span></p>
+  <p>Сумма: <span id="sum"></span></p>
+  <p>Среднее: <span id="average"></span></p>
+  <p>Минимум: <span id="min"></span></p>
+  <p>Максимум: <span id="max"></span></p>
+</body>
+</html>
