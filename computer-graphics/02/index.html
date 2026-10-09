@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ЦДА и Брезенхем</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<main>
+    <h1>Алгоритм Брезенхема для отрезка</h1>
+
+    <form id="lineForm">
+        <label>
+            x₁
+            <input id="x1" type="number"
+                   min="0" max="49" step="1" value="2" required>
+        </label>
+
+        <label>
+            y₁
+            <input id="y1" type="number"
+                   min="0" max="49" step="1" value="2" required>
+        </label>
+
+        <label>
+            x₂
+            <input id="x2" type="number"
+                   min="0" max="49" step="1" value="8" required>
+        </label>
+
+        <label>
+            y₂
+            <input id="y2" type="number"
+                   min="0" max="49" step="1" value="5" required>
+        </label>
+
+        <label>
+            Алгоритм
+            <select id="algorithm">
+                <option value="bresenham">Брезенхем</option>
+                <option value="dda">ЦДА</option>
+            </select>
+        </label>
+
+        <label>
+            <input id="zoom" type="checkbox" checked>
+            Увеличенные пиксели
+        </label>
+
+        <button type="submit">Построить</button>
+    </form>
+
+    <p>
+        Координаты — целые числа от 0 до 49.
+        Начало координат слева сверху:
+        x растёт вправо, y — вниз.
+    </p>
+
+    <p id="errorMessage" role="alert"></p>
+
+    <div class="drawing">
+        <div class="canvas-wrap">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
+
+        <div>
+            <h2>Выбранные пиксели</h2>
+            <p id="pixelCount"></p>
+            <pre id="pixels"></pre>
+        </div>
+    </div>
+
+    <h2>Таблица работы Брезенхема</h2>
+
+    <p>
+        Таблица всегда показывает работу Брезенхема
+        для введённых точек.
+        Координаты и error указаны до перехода
+        к следующему пикселю.
+        В конечной точке перехода нет.
+    </p>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>Шаг</th>
+                <th>x</th>
+                <th>y</th>
+                <th>error</th>
+                <th>error2</th>
+                <th>Изменился x</th>
+                <th>Изменился y</th>
+            </tr>
+            </thead>
+
+            <tbody id="steps"></tbody>
+        </table>
+    </div>
+
+    <h2>Сравнение наборов пикселей</h2>
+
+    <button id="compare" type="button">
+        Сравнить примеры и текущий отрезок
+    </button>
+
+    <p>
+        В таблице указаны координаты, которые есть
+        только у одного алгоритма.
+        Полные списки можно раскрыть.
+    </p>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+            <tr>
+                <th>Отрезок</th>
+                <th>Совпали</th>
+                <th>Только ЦДА</th>
+                <th>Только Брезенхем</th>
+                <th>Все пиксели</th>
+            </tr>
+            </thead>
+
+            <tbody id="comparisons"></tbody>
+        </table>
+    </div>
+
+    <h2>Эксперимент со временем</h2>
+
+    <p>
+        10 000 случайных отрезков, 5 запусков.
+        В каждой паре сначала ЦДА, затем Брезенхем.
+        Данные одинаковые для всех запусков.
+        Измеряется растеризация с записью пикселей
+        в буфер, без вывода таблиц и рисования Canvas.
+    </p>
+
+    <button id="benchmark" type="button">
+        Измерить время
+    </button>
+
+    <p id="benchmarkStatus" aria-live="polite"></p>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Запуск</th>
+            <th>ЦДА, мс</th>
+            <th>Брезенхем, мс</th>
+        </tr>
+        </thead>
+
+        <tbody id="times"></tbody>
+    </table>
+
+    <p id="summary"></p>
+</main>
+</body>
+</html>

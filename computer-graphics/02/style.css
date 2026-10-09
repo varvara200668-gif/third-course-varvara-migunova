@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f3f5f8;
+    color: #1d2939;
+    font: 16px/1.5 Arial, sans-serif;
+}
+
+main {
+    max-width: 1150px;
+    margin: 24px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+
+h2 {
+    margin-top: 28px;
+    font-size: 21px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="number"] {
+    width: 68px;
+}
+
+input,
+select,
+button {
+    padding: 8px;
+    font: inherit;
+}
+
+button {
+    color: white;
+    background: #2456a6;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.drawing {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.canvas-wrap,
+.table-wrap {
+    max-width: 100%;
+    overflow: auto;
+}
+
+canvas {
+    display: block;
+    border: 1px solid #bcc5d2;
+}
+
+pre {
+    margin: 0;
+    max-height: 480px;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #d8dee8;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #edf2fa;
+}
+
+#errorMessage {
+    color: #a02020;
+}
+
+details pre {
+    max-height: 220px;
+    min-width: 130px;
+}
+
+@media (max-width: 650px) {
+    main {
+        margin: 0;
+        padding: 14px;
+    }
+}
