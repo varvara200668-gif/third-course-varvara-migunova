@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Практическая работа 3</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Окружность по пикселям</h1>
+
+  <p>Область: x от 0 до 40, y от 0 до 30.</p>
+
+  <div>
+    <label>cx: <input id="cx" type="number" value="20"></label>
+    <label>cy: <input id="cy" type="number" value="15"></label>
+    <label>r: <input id="radius" type="number" value="10"></label>
+
+    <button id="draw">Построить</button>
+    <button id="clear">Очистить</button>
+  </div>
+
+  <p>
+    <label>
+      <input id="highlight" type="checkbox">
+      Выделить точки одного шага
+    </label>
+
+    <label>
+      Шаг:
+      <select id="step"></select>
+    </label>
+  </p>
+
+  <p id="message"></p>
+
+  <canvas id="canvas" width="615" height="465"></canvas>
+
+  <p id="points"></p>
+
+  <h2>Таблица шагов</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Шаг</th>
+        <th>x</th>
+        <th>y</th>
+        <th>d до шага</th>
+        <th>Вариант</th>
+        <th>d после шага</th>
+      </tr>
+    </thead>
+    <tbody id="steps"></tbody>
+  </table>
+
+  <h2>Сравнение с формулой</h2>
+
+  <button id="compare">Сравнить</button>
+
+  <p>5 серий по 10 000 построений. Время в миллисекундах.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>r</th>
+        <th>Базовые точки: midpoint / формула</th>
+        <th>Пиксели: midpoint / формула</th>
+        <th>Совпали?</th>
+        <th>Время midpoint</th>
+        <th>Время формулы</th>
+      </tr>
+    </thead>
+    <tbody id="comparison"></tbody>
+  </table>
+</body>
+</html>

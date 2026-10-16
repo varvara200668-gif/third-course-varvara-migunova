@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+input[type="number"] {
+  width: 65px;
+}
+
+button, select {
+  margin: 4px;
+  padding: 5px;
+}
+
+canvas {
+  border: 1px solid gray;
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 6px;
+  text-align: center;
+}
+
+th {
+  background: #eee;
+}
+
+#message {
+  min-height: 20px;
+}
+
+#points {
+  max-width: 700px;
+}
