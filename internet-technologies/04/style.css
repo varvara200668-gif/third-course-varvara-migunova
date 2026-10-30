@@ -1,0 +1,43 @@
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+input, textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 0 5px 10px 0;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.post {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.post p {
+    white-space: pre-line;
+}
+
+#error {
+    color: red;
+}

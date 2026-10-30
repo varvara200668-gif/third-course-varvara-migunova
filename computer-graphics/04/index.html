@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Отсечение отрезков</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Алгоритм Коэна–Сазерленда</h1>
+
+  <h2>Окно отсечения</h2>
+  <div class="inputs">
+    <label>xmin <input id="xmin" type="number" value="150"></label>
+    <label>xmax <input id="xmax" type="number" value="450"></label>
+    <label>ymin <input id="ymin" type="number" value="100"></label>
+    <label>ymax <input id="ymax" type="number" value="300"></label>
+  </div>
+
+  <h2>Координаты отрезка</h2>
+  <div class="inputs">
+    <label>x1 <input id="x1" type="number" value="50"></label>
+    <label>y1 <input id="y1" type="number" value="200"></label>
+    <label>x2 <input id="x2" type="number" value="550"></label>
+    <label>y2 <input id="y2" type="number" value="200"></label>
+  </div>
+
+  <div class="controls">
+    <button onclick="showLine()">Показать отрезок</button>
+    <button onclick="showPolyline()">Показать ломаную</button>
+    <button onclick="runExperiment()">Эксперимент: 50 отрезков</button>
+  </div>
+
+  <h2>Обязательные тесты</h2>
+  <div class="controls">
+    <select id="test">
+      <option value="0">1. Полностью внутри</option>
+      <option value="1">2. Полностью слева</option>
+      <option value="2">3. Полностью сверху</option>
+      <option value="3">4. Пересекает одну границу</option>
+      <option value="4">5. Пересекает две границы</option>
+      <option value="5">6. Проходит через угол</option>
+      <option value="6">7. Вертикальный</option>
+      <option value="7">8. Горизонтальный</option>
+      <option value="8">9. Оба конца снаружи</option>
+    </select>
+    <button onclick="loadTest()">Загрузить тест</button>
+  </div>
+
+  <p id="message"></p>
+
+  <canvas id="canvas" width="600" height="400"></canvas>
+
+  <p class="legend">
+    Серый — исходный отрезок.
+    Синий — видимая часть.
+    Чёрная рамка — окно отсечения.
+  </p>
+
+  <p id="codes"></p>
+  <p id="result"></p>
+
+  <h2>Таблица итераций</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Шаг</th>
+          <th>A</th>
+          <th>codeA</th>
+          <th>B</th>
+          <th>codeB</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody id="stepsBody"></tbody>
+    </table>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

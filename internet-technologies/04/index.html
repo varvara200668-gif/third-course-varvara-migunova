@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Публикации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Публикации</h1>
+
+    <h2 id="formTitle">Новая публикация</h2>
+    <form id="postForm">
+        <input id="title" type="text" placeholder="Заголовок">
+        <textarea id="body" placeholder="Текст публикации"></textarea>
+        <button id="saveButton" type="submit">Сохранить</button>
+        <button id="cancelButton" type="button">Отмена</button>
+    </form>
+
+    <p id="status"></p>
+    <p id="error"></p>
+
+    <h2>Список публикаций</h2>
+    <input id="search" type="text" placeholder="Поиск по заголовку и тексту">
+    <div id="posts"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
