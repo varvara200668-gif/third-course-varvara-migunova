@@ -75,6 +75,7 @@ data.db создаётся при запуске
 
 9. Скриншоты
 
+
 ![Страница приложения](screenshots/page.png)
 
 ![POST](screenshots/post.png)
