@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои задачи</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Мои задачи</h1>
+    <form id="task-form" novalidate>
+      <label for="task-title">Название задачи</label>
+      <input id="task-title" placeholder="Например, выполнить лабораторную">
+      <label for="task-description">Описание (необязательно)</label>
+      <textarea id="task-description" rows="2"></textarea>
+      <button type="submit">Добавить</button>
+    </form>
+    <button id="refresh" type="button">Обновить список</button>
+    <p id="message" role="status" aria-live="polite"></p>
+    <ul id="task-list"></ul>
+  </main>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f4f8;
+  color: #202d40;
+  margin: 0;
+  padding: 24px;
+}
+main { max-width: 650px; margin: auto; }
+h1 { margin-top: 8px; }
+form, li { background: white; padding: 18px; border: 1px solid #d5deea; border-radius: 8px; }
+form { display: grid; gap: 10px; margin-bottom: 16px; }
+input, textarea, button { font: inherit; }
+input, textarea { padding: 10px; border: 1px solid #a4b1c1; border-radius: 4px; min-width: 0; }
+button { padding: 9px 14px; border: 0; border-radius: 4px; background: #245bbb; color: white; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: wait; }
+ul { list-style: none; padding: 0; }
+li { margin-bottom: 12px; overflow-wrap: anywhere; }
+li button { margin-right: 8px; margin-top: 10px; }
+li p { margin: 8px 0; white-space: pre-wrap; }
+.done { text-decoration: line-through; color: #626d7b; }
+.error { color: #b02222; }

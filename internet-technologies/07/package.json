@@ -1,0 +1,9 @@
+{
+  "name": "lab-07-tasks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ЛР7: браузер, Express и SQLite",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=22.13.0" },
+  "dependencies": { "express": "^5.1.0" }
+}
